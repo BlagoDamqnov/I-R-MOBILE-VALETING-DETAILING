@@ -1,8 +1,84 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<style>
+    .jumbotron {
+        background-image: url('https://i.pinimg.com/1200x/aa/c9/22/aac922619547e10f6a20cfd472e18a48.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #ffffff;
+        padding: 100px 0;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        .jumbotron h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .jumbotron p {
+            font-size: 1.5rem;
+        }
+
+    .feature-box {
+        background-color: #ffffff;
+        color: #333;
+        padding: 30px;
+        border-radius: 10px;
+        margin: 20px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-box h2 {
+            font-size: 2rem;
+            color: #343a40;
+            margin-bottom: 15px;
+        }
+
+        .feature-box p {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-box a {
+            background-color: #343a40;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+            .feature-box a:hover {
+                background-color: #22282c;
+            }
+</style>
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome to I-R Mobile Valeting & Detailing</h1>
+        <p>Your one-stop solution for professional car washing and detailing services.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="feature-box">
+                <h2>Our Services</h2>
+                <p>Experience the best car cleaning services from our experts. We offer a range of services to keep your car shining.</p>
+                <a asp-controller="ServiceController" asp-action="Index" class="btn btn-dark">Learn More</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="feature-box">
+                <h2>Contact Us</h2>
+                <p>Have any questions or want to book our services? Contact us today and we'll be happy to assist you.</p>
+                <a asp-controller="ContactController" asp-action="Index" class="btn btn-dark">Contact Now</a>
+            </div>
+        </div>
+    </div>
 </div>

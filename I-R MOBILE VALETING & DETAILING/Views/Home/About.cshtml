@@ -1,0 +1,80 @@
+﻿<style>
+    .container-about {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+        .header h1 {
+            font-size: 36px;
+        }
+
+    .animation-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .animation-text {
+        flex: 1;
+        padding: 20px;
+    }
+
+        .animation-text h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .animation-text p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+    .animation-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 200px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .animation-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .animation-image:hover {
+            transform: scale(1.1);
+        }
+</style>
+
+
+<div class="container-about">
+    <div class="header">
+        <h1>About Us</h1>
+        <p>We are a mobile car wash service dedicated to making your car shine.</p>
+    </div>
+    <div class="animation-wrapper">
+        <div class="animation-text">
+            <h2>Our Approach</h2>
+            <p>We believe in delivering top-notch car washing services right at your doorstep. Our experienced team uses eco-friendly products and modern techniques to ensure your car gets the care it deserves.</p>
+        </div>
+        <div class="animation-image">
+            <img src="https://plus.unsplash.com/premium_photo-1661454209648-4764099a9be9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Mobile Car Wash">
+        </div>
+    </div>
+    <div class="animation-wrapper">
+        <div class="animation-image">
+            <img src="https://plus.unsplash.com/premium_photo-1661368421663-13b2d8115241?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Eco-Friendly">
+        </div>
+        <div class="animation-text">
+            <h2>Eco-Friendly Approach</h2>
+            <p>We are committed to protecting the environment. Our cleaning solutions are biodegradable and safe for your vehicle and the planet. We aim to give you a sparkling clean car while minimizing our carbon footprint.</p>
+        </div>
+    </div>
+</div>
