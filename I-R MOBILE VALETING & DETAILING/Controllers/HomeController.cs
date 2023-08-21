@@ -21,6 +21,14 @@ namespace I_R_MOBILE_VALETING___DETAILING.Controllers
         {
             return View();
         }
+        public IActionResult Booking()
+        {
+            return View();
+        }
+        public IActionResult Price()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

@@ -1,0 +1,94 @@
+﻿<style>
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Apply animations to the elements within the card on hover */
+.card:hover .animate__animated {
+    animation: animate__rubberBand 0.5s;
+}
+
+/* Define the keyframes for the rubberBand animation */
+@@keyframes animate__rubberBand {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+</style>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Our Services and Pricing</h2>
+    <div class="row">
+        <div class="col-md-4 animate__animated animate__fadeIn">
+            <div class="card">
+                <img src="https://img1.wsimg.com/isteam/stock/7075/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" class="card-img-top" alt="Car Wash Service 1">
+                <div class="card-body">
+                    <h5 class="card-title">Basic Wash</h5>
+                    <p class="card-text">
+                        <i class="bi bi-check-circle text-success"></i> <strong>Exterior hand wash and dry.</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Tire cleaning.</strong><br>
+                        <strong>Price: $20</strong>
+                    </p>
+                    <a href="/Booking" class="btn btn-primary btn-block">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 animate__animated animate__fadeIn">
+            <div class="card">
+                <img src="https://cleaneat.ng/wp-content/uploads/2022/01/car-washing-service-in-lagos.jpg" class="card-img-top" alt="Car Wash Service 2">
+                <div class="card-body">
+                    <h5 class="card-title">Deluxe Wash</h5>
+                    <p class="card-text">
+                        <i class="bi bi-check-circle text-success"></i> <strong>Exterior hand wash, dry, and interior vacuuming.</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Tire cleaning and dressing.</strong><br>
+                        <strong>Price: $40</strong>
+                    </p>
+                    <a href="/Booking" class="btn btn-primary btn-block">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 animate__animated animate__fadeIn">
+            <div class="card">
+                <img src="https://img.indianauto.com/2020/05/29/l2AZQYjw/car-washing-876a.jpg" class="card-img-top" alt="Car Wash Service 3">
+                <div class="card-body">
+                    <h5 class="card-title">Premium Wash</h5>
+                    <p class="card-text">
+                        <i class="bi bi-check-circle text-success"></i> <strong>Exterior hand wash, dry, interior vacuuming, and waxing.</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Tire cleaning, dressing, and rim polishing.</strong><br>
+                        <strong>Price: $60</strong>
+                    </p>
+                    <a href="/Booking" class="btn btn-primary btn-block">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</script>
+<!-- Include Bootstrap Icons CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Include Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">

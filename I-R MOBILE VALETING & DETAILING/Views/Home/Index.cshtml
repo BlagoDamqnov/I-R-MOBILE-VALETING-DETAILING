@@ -56,6 +56,48 @@
             .feature-box a:hover {
                 background-color: #22282c;
             }
+            .feature-box {
+            /* Other styles */
+            height: 100%; /* Ensure both feature boxes have the same height */
+        }
+
+        /* Additional styles to ensure equal height on all devices */
+        @@media (max-width: 767px) {
+            .feature-box {
+                height: auto; /* Reset height on smaller screens */
+            }
+        }
+
+        .feature-box-content {
+            padding: 20px;
+        }
+
+        .feature-box h2 {
+            font-size: 1.5rem;
+            color: #343a40;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .feature-box a {
+            display: inline-block;
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .feature-box a:hover {
+            background-color: #22282c;
+        }
 </style>
 <div class="jumbotron">
     <div class="container">
@@ -68,16 +110,20 @@
     <div class="row">
         <div class="col-md-6">
             <div class="feature-box">
-                <h2>Our Services</h2>
-                <p>Experience the best car cleaning services from our experts. We offer a range of services to keep your car shining.</p>
-                <a asp-controller="ServiceController" asp-action="Index" class="btn btn-dark">Learn More</a>
+                <div class="feature-box-content">
+                    <h2>Our Services</h2>
+                    <p>Experience the best car cleaning services from our experts. We offer a range of services to keep your car shining.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
             </div>
         </div>
         <div class="col-md-6">
             <div class="feature-box">
-                <h2>Contact Us</h2>
-                <p>Have any questions or want to book our services? Contact us today and we'll be happy to assist you.</p>
-                <a asp-controller="ContactController" asp-action="Index" class="btn btn-dark">Contact Now</a>
+                <div class="feature-box-content">
+                    <h2>Contact Us</h2>
+                    <p>Have any questions or want to book our services? Contact us today and we'll be happy to assist you.</p>
+                    <a href="#" class="btn">Contact Now</a>
+                </div>
             </div>
         </div>
     </div>
