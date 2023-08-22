@@ -43,11 +43,11 @@ namespace I_R_MOBILE_VALETING___DETAILING.Controllers
             await _bookService.SendEmailOnGmail("blago0363@gmail.com", bookVM);
             return RedirectToAction(nameof(Booking));
         }
-        public IActionResult Price()
+        public IActionResult Service()
         {
             return View();
         }
-        public IActionResult Privacy()
+        public IActionResult Contact()
         {
             return View();
         }

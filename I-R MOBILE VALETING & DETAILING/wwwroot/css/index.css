@@ -1,0 +1,85 @@
+﻿.jumbotron {
+    background-image: url('https://scontent.fsof8-1.fna.fbcdn.net/v/t39.30808-6/367443503_346278664397020_8660131513323540161_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=FWAPo2zvL1cAX9NutU4&_nc_ht=scontent.fsof8-1.fna&oh=00_AfD1qOngMHsZ4WpsOsqguMT8rqU-5XIrw4LIy5--O-u7nQ&oe=64E96130');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+    .jumbotron h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .jumbotron p {
+        font-size: 1.5rem;
+    }
+
+.feature-boxes {
+    display: flex;
+}
+
+.feature-box-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-box {
+    background: linear-gradient(45deg, #F000A2,#3B218A, #7F81F1);
+    color: rgba(255,255,255,.8);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #3B218A;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+    .feature-box:hover {
+        transform: translateY(-10px);
+    }
+
+    .feature-box h2 {
+        font-size: 2rem;
+        color: rgba(255,255,255);
+        margin-bottom: 15px;
+    }
+
+    .feature-box p {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+    }
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.feature-box a {
+    background-color: #3B218A;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    flex: 1;
+}
+
+    .feature-box a:hover {
+        background-color: #41024D;
+        color: #ffffff !important;
+    }
+/* Additional styles to ensure equal height on all devices */
+@media (max-width: 767px) {
+    .feature-box {
+        height: auto; /* Reset height on smaller screens */
+    }
+}

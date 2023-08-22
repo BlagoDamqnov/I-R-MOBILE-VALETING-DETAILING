@@ -1,0 +1,50 @@
+﻿
+.contact-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+    .contact-card h4 {
+        margin-bottom: 20px;
+    }
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+    .contact-info i {
+        color: #007bff;
+        margin-right: 10px;
+    }
+
+.work-hours {
+    margin-top: 20px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+    .social-icons .btn {
+        margin-right: 10px;
+    }
+
+.facebook-color {
+    color: #1877F2;
+}
+
+.instagram-color {
+    color: #E4405F;
+}
+
+.whatsapp-color {
+    color: #25D366;
+}
+
+.tiktok-color {
+    color: #000000;
+}

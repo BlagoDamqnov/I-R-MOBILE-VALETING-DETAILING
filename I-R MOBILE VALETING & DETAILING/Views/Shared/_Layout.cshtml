@@ -9,91 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Add FontAwesome CSS link for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Custom Styles */
-        body {
-            background: linear-gradient(45deg, #F000A4, #2E8AA1, #3B218A, #7F81F1);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
-            background-color: #343a40;
-            border-bottom: 3px solid #f0ad4e;
-        }
-
-        .navbar-brand {
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 1.8rem;
-        }
-
-        .navbar-nav {
-            margin-left: auto;
-        }
-
-            .navbar-nav .nav-item {
-                margin: 0 15px;
-            }
-
-            .navbar-nav .nav-link {
-                color: #ffffff;
-                font-size: 1.1rem;
-                padding: 10px 0;
-                position: relative;
-                transition: color 0.3s;
-            }
-
-                .navbar-nav .nav-link::before {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    bottom: 0;
-                    left: 0;
-                    background-color: transparent;
-                    transform: scaleX(0);
-                    transform-origin: bottom right;
-                    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-                }
-
-                .navbar-nav .nav-link.active {
-                    color: #E800B9;
-                }
-
-                    .navbar-nav .nav-link.active::before {
-                        background-color: #E800B9;
-                        transform: scaleX(1);
-                        transform-origin: bottom left;
-                    }
-
-                .navbar-nav .nav-link:hover::before {
-                    background-color: #E800B9;
-                    transform: scaleX(1);
-                    transform-origin: bottom left;
-                }
-                   .navbar-brand {
-            font-weight: bold;
-            font-size: 1.8rem;
-            background: -webkit-linear-gradient(45deg, #F000A4, #2E8AA1, #3B218A, #7F81F1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            /* Add transition for smooth color change */
-            transition: background 0.3s, -webkit-text-fill-color 0.3s;
-        }
-
-        .footer {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/about.css">
+    <link rel="stylesheet" href="~/css/booking.css">
+    <link rel="stylesheet" href="~/css/contact.css">
+    <link rel="stylesheet" href="~/css/index.css">
+    <link rel="stylesheet" href="~/css/service.css">
 </head>
 <body>
     <header>
@@ -113,13 +34,13 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Price">Price</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Service">Price</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Booking">Booking</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Contact</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
                         </li>
                     </ul>
                     <div class="navbar-nav ml-auto">
