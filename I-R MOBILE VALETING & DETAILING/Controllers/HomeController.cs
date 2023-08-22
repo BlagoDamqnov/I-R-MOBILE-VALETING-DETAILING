@@ -1,5 +1,7 @@
 ﻿using I_R_MOBILE_VALETING___DETAILING.Models;
+using I_R_MOBILE_VALETING___DETAILING.Service.Contract;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Diagnostics;
 
 namespace I_R_MOBILE_VALETING___DETAILING.Controllers
@@ -7,10 +9,12 @@ namespace I_R_MOBILE_VALETING___DETAILING.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IBookService _bookService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IBookService bookService)
         {
             _logger = logger;
+            _bookService = bookService;
         }
 
         public IActionResult Index()
@@ -21,9 +25,22 @@ namespace I_R_MOBILE_VALETING___DETAILING.Controllers
         {
             return View();
         }
+
+        [HttpGet]
         public IActionResult Booking()
         {
             return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Booking(Book bookVM)
+        {
+            if(!ModelState.IsValid)
+            {
+                return View(bookVM);
+            }
+
+            await _bookService.CreateBooking(bookVM);
+            return RedirectToAction(nameof(Booking));
         }
         public IActionResult Price()
         {

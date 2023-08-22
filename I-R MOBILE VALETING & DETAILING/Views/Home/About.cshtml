@@ -5,9 +5,9 @@
         padding: 40px;
     }
 
-        .header h1 {
-            font-size: 36px;
-        }
+    .header h1 {
+        font-size: 36px;
+    }
 
     .animation-wrapper {
         display: flex;
@@ -21,15 +21,15 @@
         padding: 20px;
     }
 
-        .animation-text h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
+    .animation-text h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
 
-        .animation-text p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
+    .animation-text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
 
     .animation-image {
         flex: 1;
@@ -43,15 +43,59 @@
         transition: transform 0.3s ease-in-out;
     }
 
-        .animation-image img {
-            max-width: 100%;
-            height: auto;
-        }
+    .animation-image img {
+        max-width: 100%;
+        height: auto;
+    }
 
-        .animation-image:hover {
-            transform: scale(1.1);
-        }
+    .animation-image:hover {
+        transform: scale(1.1);
+    }
+
+    /* New styles for service cards */
+    .service-cards {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    .service-card {
+        background-color: #2E8AA1;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        color: white;
+        text-align: center;
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .service-card:hover {
+        background-color: #296AC8;
+        transform: scale(1.05);
+    }
+
+    /* New styles for contact section */
+    .contact-section {
+        background-color: #3B218A;
+        color: white;
+        text-align: center;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-section a {
+        color: #E800B9;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .contact-section a:hover {
+        color: white;
+    }
 </style>
+
 
 
 <div class="container-about">

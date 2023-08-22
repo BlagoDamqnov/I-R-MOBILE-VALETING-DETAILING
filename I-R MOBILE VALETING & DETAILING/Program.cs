@@ -1,4 +1,6 @@
 using I_R_MOBILE_VALETING___DETAILING.Data;
+using I_R_MOBILE_VALETING___DETAILING.Service;
+using I_R_MOBILE_VALETING___DETAILING.Service.Contract;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +21,8 @@ namespace I_R_MOBILE_VALETING___DETAILING
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<IBookService, BookService>();
 
             var app = builder.Build();
 

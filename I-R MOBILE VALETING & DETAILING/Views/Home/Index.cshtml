@@ -1,6 +1,6 @@
 ﻿<style>
     .jumbotron {
-        background-image: url('https://i.pinimg.com/1200x/aa/c9/22/aac922619547e10f6a20cfd472e18a48.jpg');
+        background-image: url('https://scontent.fsof8-1.fna.fbcdn.net/v/t39.30808-6/367443503_346278664397020_8660131513323540161_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=FWAPo2zvL1cAX9NutU4&_nc_ht=scontent.fsof8-1.fna&oh=00_AfD1qOngMHsZ4WpsOsqguMT8rqU-5XIrw4LIy5--O-u7nQ&oe=64E96130');
         background-size: cover;
         background-position: center;
         color: #ffffff;
@@ -19,14 +19,27 @@
             font-size: 1.5rem;
         }
 
+    .feature-boxes {
+        display: flex;
+    }
+
+    .feature-box-container {
+        display: flex;
+        flex-direction: column;
+    }
+
     .feature-box {
-        background-color: #ffffff;
-        color: #333;
+        background: linear-gradient(45deg, #F000A2,#3B218A, #7F81F1);
+        color: rgba(255,255,255,.8);
         padding: 30px;
         border-radius: 10px;
         margin: 20px 0;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease-in-out;
+        border: 2px solid #3B218A;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
         .feature-box:hover {
@@ -35,7 +48,7 @@
 
         .feature-box h2 {
             font-size: 2rem;
-            color: #343a40;
+            color: rgba(255,255,255);
             margin-bottom: 15px;
         }
 
@@ -44,60 +57,33 @@
             margin-bottom: 20px;
         }
 
-        .feature-box a {
-            background-color: #343a40;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+    }
 
-            .feature-box a:hover {
-                background-color: #22282c;
-            }
-            .feature-box {
-            /* Other styles */
-            height: 100%; /* Ensure both feature boxes have the same height */
-        }
-
-        /* Additional styles to ensure equal height on all devices */
-        @@media (max-width: 767px) {
-            .feature-box {
-                height: auto; /* Reset height on smaller screens */
-            }
-        }
-
-        .feature-box-content {
-            padding: 20px;
-        }
-
-        .feature-box h2 {
-            font-size: 1.5rem;
-            color: #343a40;
-            margin-bottom: 10px;
-        }
-
-        .feature-box p {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .feature-box a {
-            display: inline-block;
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 8px 16px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: background-color 0.3s ease;
-        }
+    .feature-box a {
+        background-color: #3B218A;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        flex: 1;
+    }
 
         .feature-box a:hover {
-            background-color: #22282c;
+            background-color: #41024D;
+            color: #ffffff !important;
         }
+    /* Additional styles to ensure equal height on all devices */
+    @@media (max-width: 767px) {
+        .feature-box {
+            height: auto; /* Reset height on smaller screens */
+        }
+    }
 </style>
 <div class="jumbotron">
     <div class="container">
@@ -107,22 +93,26 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
+    <div class="row feature-boxes">
+        <div class="col-md-6 feature-box-container">
             <div class="feature-box">
-                <div class="feature-box-content">
-                    <h2>Our Services</h2>
-                    <p>Experience the best car cleaning services from our experts. We offer a range of services to keep your car shining.</p>
-                    <a href="#" class="btn">Learn More</a>
+                <h2>Our Services</h2>
+                <p>Experience the best car cleaning services from our experts. We offer a range of services to keep your car shining.</p>
+                <div class="btn-container">
+                    <div class="btn-wrapper">
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 feature-box-container">
             <div class="feature-box">
-                <div class="feature-box-content">
-                    <h2>Contact Us</h2>
-                    <p>Have any questions or want to book our services? Contact us today and we'll be happy to assist you.</p>
-                    <a href="#" class="btn">Contact Now</a>
+                <h2>Contact Us</h2>
+                <p>Have any questions or want to book our services? Contact us today and we'll be happy to assist you.</p>
+                <div class="btn-container">
+                    <div class="btn-wrapper">
+                        <a href="#" class="btn">Contact Now</a>
+                    </div>
                 </div>
             </div>
         </div>

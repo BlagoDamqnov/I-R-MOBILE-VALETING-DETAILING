@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using I_R_MOBILE_VALETING___DETAILING.Data.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace I_R_MOBILE_VALETING___DETAILING.Data
@@ -9,5 +10,7 @@ namespace I_R_MOBILE_VALETING___DETAILING.Data
             : base(options)
         {
         }
+
+        public DbSet<Booking> Bookings { get; set; }
     }
 }
