@@ -40,6 +40,7 @@ namespace I_R_MOBILE_VALETING___DETAILING.Controllers
             }
 
             await _bookService.CreateBooking(bookVM);
+            await _bookService.SendEmailOnGmail("blago0363@gmail.com", bookVM);
             return RedirectToAction(nameof(Booking));
         }
         public IActionResult Price()
