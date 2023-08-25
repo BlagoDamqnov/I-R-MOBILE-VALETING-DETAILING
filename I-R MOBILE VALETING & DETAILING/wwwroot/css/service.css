@@ -1,5 +1,6 @@
 ﻿.card {
     transition: transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(45deg, #F000A4, #2E8AA1, #3B218A);
 }
 
     .card:hover {

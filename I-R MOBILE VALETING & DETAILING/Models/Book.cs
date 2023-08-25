@@ -9,6 +9,5 @@
         public string WashType { get; set; } = null!;
         public string? Description { get; set; }
         public DateTime Date { get; set; }
-        public string Time { get; set; } = null!;
     }
 }

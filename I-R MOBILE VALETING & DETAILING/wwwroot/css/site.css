@@ -83,7 +83,7 @@ body {
 
 .navbar-brand {
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
     background: -webkit-linear-gradient(45deg, #F000A4, #2E8AA1, #3B218A, #7F81F1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

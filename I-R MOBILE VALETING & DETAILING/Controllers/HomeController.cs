@@ -34,15 +34,26 @@ namespace I_R_MOBILE_VALETING___DETAILING.Controllers
         [HttpPost]
         public async Task<IActionResult> Booking(Book bookVM)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(bookVM);
             }
+            var phoneNumber = "+447395229063"; // Replace with the customer's phone number
 
-            await _bookService.CreateBooking(bookVM);
-            await _bookService.SendEmailOnGmail("blago0363@gmail.com", bookVM);
-            return RedirectToAction(nameof(Booking));
+            // Create a message for booking a mobile car wash
+            var message = $"Hello! I would like to book a mobile car wash service.{Environment.NewLine}" +
+                           $"Name: {bookVM.Name}{Environment.NewLine}" +
+                           $"Email: {bookVM.Email}{Environment.NewLine}" +
+                           $"Phone Number: {bookVM.Phone}{Environment.NewLine}" +
+                           $"Service Type: {bookVM.WashType}{Environment.NewLine}" +
+                           $"Please let me know the available dates and times.";
+
+            var whatsappUrl = $"https://api.whatsapp.com/send?phone={phoneNumber}&text={System.Web.HttpUtility.UrlEncode(message)}";
+
+            return Redirect(whatsappUrl);
         }
+
+
         public IActionResult Service()
         {
             return View();
