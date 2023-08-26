@@ -1,52 +1,253 @@
-﻿<div class="container mt-5">
+﻿<style>
+    .card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        background: linear-gradient(45deg, #F000A4, #2E8AA1, #3B218A);
+        width: auto
+    }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+            /* Apply animations to the elements within the card on hover */
+            .card:hover .animate__animated {
+                animation: animate__rubberBand 0.5s;
+            }
+
+    /* Define the keyframes for the rubberBand animation */
+    @@keyframes animate__rubberBand {
+        0% {
+            transform: scale3d(1, 1, 1);
+        }
+
+        30% {
+            transform: scale3d(1.25, 0.75, 1);
+        }
+
+        40% {
+            transform: scale3d(0.75, 1.25, 1);
+        }
+
+        50% {
+            transform: scale3d(1.15, 0.85, 1);
+        }
+
+        65% {
+            transform: scale3d(0.95, 1.05, 1);
+        }
+
+        75% {
+            transform: scale3d(1.05, 0.95, 1);
+        }
+
+        100% {
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    h5, h2, p, strong {
+        color: rgba(255,255,255,.8);
+    }
+
+    .card {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Add padding to the card content */
+    .card-body {
+        padding: 20px;
+    }
+
+    .option-text {
+        text-align: center;
+        font-size: 20px;
+        color: rgba(255,255,255,.8);
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+</style>
+
+
+<div class="container mt-5">
     <h2 class="mb-4">Our Services and Pricing</h2>
     <div class="row">
-        <div class="col-md-4 animate__animated animate__fadeIn">
-            <div class="card">
-                <img src="https://img1.wsimg.com/isteam/stock/7075/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" class="card-img-top" alt="Car Wash Service 1">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://img1.wsimg.com/isteam/stock/7075/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" class="card-img-top" alt="Car Wash Service">
+                    <div class="option-text">Option 1</div>
                 <div class="card-body">
-                    <h5 class="card-title">Basic Wash</h5>
+                    <h5 class="card-title">Exterior Wash - SUV & 4X4</h5>
                     <p class="card-text">
-                        <i class="bi bi-check-circle text-success"></i> <strong>Exterior hand wash and dry.</strong><br>
-                        <i class="bi bi-check-circle text-success"></i> <strong>Tire cleaning.</strong><br>
-                        <strong>Price: $20</strong>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Pretreat soiled areas and lower bodywork.</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Pretreat alloys.</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Hand wash difficult to reach areas and alloys</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Wash entire exterior with brush system.</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Chamois dry bodywork and glass including door and boot sills.</strong><br>
+                        <strong>Price: £15.00, £20</strong>
                     </p>
                     <a asp-controller="Home" asp-action="Booking" class="btn btn-primary btn-block">Book Now</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 animate__animated animate__fadeIn">
-            <div class="card">
-                <img src="https://cleaneat.ng/wp-content/uploads/2022/01/car-washing-service-in-lagos.jpg" class="card-img-top" alt="Car Wash Service 2">
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://img1.wsimg.com/isteam/stock/7075/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" class="card-img-top" alt="Car Wash Service">
+                    <div class="option-text">Option 2</div>
                 <div class="card-body">
-                    <h5 class="card-title">Deluxe Wash</h5>
+                    <h5 class="card-title">Interior Clean - SUV & 4X4</h5>
                     <p class="card-text">
-                        <i class="bi bi-check-circle text-success"></i> <strong>Exterior hand wash, dry, and interior vacuuming.</strong><br>
-                        <i class="bi bi-check-circle text-success"></i> <strong>Tire cleaning and dressing.</strong><br>
-                        <strong>Price: $40</strong>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Vacuum the interior and boot.</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean dashboard, centre console, door panels, sun visors and smooth leather upholstery</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean instrument cluster and touch screens</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Spray interior mats with Odour Eliminator</strong><br>
+                        <strong>Price:</strong><br>
+                        <strong>2 doors -> £12.50</strong><br>
+                        <strong>M -> £15.00</strong><br>
+                        <strong>L -> £20.00</strong>
                     </p>
                     <a asp-controller="Home" asp-action="Booking" class="btn btn-primary btn-block">Book Now</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 animate__animated animate__fadeIn">
-            <div class="card">
-                <img src="https://img.indianauto.com/2020/05/29/l2AZQYjw/car-washing-876a.jpg" class="card-img-top" alt="Car Wash Service 3">
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://img1.wsimg.com/isteam/stock/7075/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" class="card-img-top" alt="Car Wash Service">
+                    <div class="option-text">Option 3</div>
                 <div class="card-body">
-                    <h5 class="card-title">Premium Wash</h5>
+                    <h5 class="card-title">Interior and Exterior Refresh Valet - SUV & 4X4</h5>
                     <p class="card-text">
-                        <i class="bi bi-check-circle text-success"></i> <strong>Exterior hand wash, dry, interior vacuuming, and waxing.</strong><br>
-                        <i class="bi bi-check-circle text-success"></i> <strong>Tire cleaning, dressing, and rim polishing.</strong><br>
-                        <strong>Price: $60</strong>
+                        <i class="bi bi-check-circle text-success"></i> <strong>All items included in Option 1 & 2 plus:</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Hand buff bodywork with a microfibre cloth</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean rubber mats</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Dress tyres</strong><br>
+                        <strong>Price:</strong><br>
+                        <strong>S -> £22.50</strong><br>
+                        <strong>M -> £25.00</strong><br>
+                        <strong>L -> £35.00</strong>
                     </p>
                     <a asp-controller="Home" asp-action="Booking" class="btn btn-primary btn-block">Book Now</a>
                 </div>
             </div>
         </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://img1.wsimg.com/isteam/stock/7075/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" class="card-img-top" alt="Car Wash Service">
+                    <div class="option-text">Option 4</div>
+                <div class="card-body">
+                    <h5 class="card-title">Interior and Exterior Allrounder Valet -  SUV & 4X4</h5>
+                    <p class="card-text">
+                        <i class="bi bi-check-circle text-success"></i> <strong>All items included in Option 3 plus:</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean and polish interior glass including rear view and vanity mirrors</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean and polish exterior glass</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Apply Interior Trim Sheen to all interior plastics and trim if required</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Apply Exterior Trim Sheen to exterior trim and bumpers if required</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Spray interior mats Odour Eliminator</strong><br>
+                        <strong>Price:</strong><br>
+                        <strong>S -> £35.00</strong><br>
+                        <strong>M -> £40.00</strong><br>
+                        <strong>L -> £60.00</strong>
+                    </p>
+                    <a asp-controller="Home" asp-action="Booking" class="btn btn-primary btn-block">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://img1.wsimg.com/isteam/stock/7075/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" class="card-img-top" alt="Car Wash Service">
+                    <div class="option-text">Option 5</div>
+                <div class="card-body">
+                    <h5 class="card-title">Exterior Details Valet -  SUV & 4X4</h5>
+                    <p class="card-text">
+                        <i class="bi bi-check-circle text-success"></i> <strong>Option 1 - Exterior Wash plus:</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Remove any tar/gym/sap spots with Tar and Adhesive Remover(Note: If the car is heavily contaminated additional charges apply)</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Remove marks and minor scratches(a machine polishing compound)</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Wash off areas that were treated and chamois dry</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Hand polish bodywork with Wax and buff with a microfibre cloth</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Apply Exterior Trim Sheen to exterior trim and bumpers if required</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean and polish exterior glass</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Dress tyres</strong><br>
+                        <strong>Price:</strong><br>
+                        <strong>S -> £45.00</strong><br>
+                        <strong>M -> £60.00</strong><br>
+                        <strong>L -> £75.00</strong>
+                    </p>
+                    <a asp-controller="Home" asp-action="Booking" class="btn btn-primary btn-block">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://img1.wsimg.com/isteam/stock/7075/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" class="card-img-top" alt="Car Wash Service">
+                    <div class="option-text">Option 6</div>
+                <div class="card-body">
+                    <h5 class="card-title">Interior Details Valet & Exterior Glass -  SUV & 4X4</h5>
+                    <p class="card-text">
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean and polish interior glass including rear view and vanity mirros</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Thoroughly vacuum the interior and boot(the less stuff inside the car/boot, the more thoroygh tha vacuum)</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Deep clean cloth seats including seat backs , loose woven mats and carpets with a wet and dry extraction vacuum</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean rubber mats</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean the boot carpet using a special coarse spomge</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean dashboard , centre console , door panels , sun visors and smooth leather upholstery</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Condition leather upholstery</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Apply Interior Trim Sheen to all interior plastics and trim if required</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean instrument cluster and touch screens</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean and polish exterior glass including rear view mirrors</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Spray interior mats</strong><br>
+                        <strong>Price:</strong><br>
+                        <strong>S -> £45.00</strong><br>
+                        <strong>M -> £55.00</strong><br>
+                        <strong>L -> £65.00</strong>
+                    </p>
+                    <a asp-controller="Home" asp-action="Booking" class="btn btn-primary btn-block">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://img1.wsimg.com/isteam/stock/7075/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" class="card-img-top" alt="Car Wash Service">
+                    <div class="option-text">Option 7</div>
+                <div class="card-body">
+                    <h5 class="card-title">Interior and Exterior  Detail Valet</h5>
+                    <p class="card-text">
+                        <i class="bi bi-check-circle text-success"></i> <strong>All items included in Option 5 & 6</strong><br>
+                        <strong>Price: £80.00 cars , £95.00</strong>
+                    </p>
+                    <a asp-controller="Home" asp-action="Booking" class="btn btn-primary btn-block">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://img1.wsimg.com/isteam/stock/7075/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" class="card-img-top" alt="Car Wash Service">
+                <div class="card-body">
+                    <h5 class="card-title">Extras</h5>
+                    <p class="card-text">
+                        <i class="bi bi-check-circle text-success"></i> <strong>Dress tyres - £5.00</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Treat interior plastiscs and trim - £5.00</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Treat exterior plastics and trim - £5.00</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean rubber mats - £5.00/set of 4</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Woven loose mats deep cleaned using a wet and dry extraction vacuum - £15.00</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean and polish interior glass - £10.00</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Clean and polish exterior glass - £10.00</strong><br>
+                        <i class="bi bi-check-circle text-success"></i> <strong>Vacuum the interior and empty boot from £10.00, £15.00 for large cars, SUVs & 4x4 </strong><br>
+                    </p>
+                </div>
+            </div>
     </div>
 </div>
+</div>
 
-</script>
+
 <!-- Include Bootstrap Icons CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 <!-- Include Animate.css -->

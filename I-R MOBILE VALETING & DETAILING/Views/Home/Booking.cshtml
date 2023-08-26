@@ -19,9 +19,13 @@
         <div class="mb-3">
             <div class="position-relative">
                 @Html.DropDownListFor(m => m.WashType, new SelectList(new[] {
-            new { Value = "basic", Text = "Basic Wash" },
-            new { Value = "deluxe", Text = "Deluxe Wash" },
-            new { Value = "premium", Text = "Premium Wash" }
+            new { Value = "basic", Text = "Exterior Wash - SUV & 4X4" },
+            new { Value = "deluxe", Text = "Interior Clean - SUV & 4X4" },
+            new { Value = "premium", Text = "Interior and Exterior Refresh Valet - SUV & 4X4" },
+            new { Value = "premium", Text = "Interior and Exterior Allrounder Valet -  SUV & 4X4"},
+            new { Value = "premium", Text = "Exterior Details Valet -  SUV & 4X4" },
+            new { Value = "premium", Text = "Interior Details Valet & Exterior Glass -  SUV & 4X4" },
+            new { Value = "premium", Text = "Interior and Exterior  Detail Valet" },
             }, "Value", "Text"), "Select a car wash type", new { @class = "form-select", required = "required" })
             </div>
         </div>
@@ -30,7 +34,7 @@
         </div>
         <div class="row mb-3">
             <div class="col-md-6">
-                @Html.TextBoxFor(m => m.Date, new { @class = "form-control date-picker", type = "date", min = DateTime.Today.ToString("yyyy-MM-dd"), required = "required" })
+                @Html.TextBoxFor(m => m.Date, new { @class = "form-control date-time-picker", type = "date", min = DateTime.Today.ToString("yyyy-MM-dd"), required = "required" })
             </div>
         </div>
         <div class="text-center">

@@ -96,3 +96,37 @@
 .about{
     color: rgba(255,255,255,.6) !important;
 }
+@media (max-width: 768px) {
+    .container-about {
+        padding: 20px;
+    }
+
+    .animation-wrapper {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .animation-text,
+    .animation-image {
+        flex: none;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .animation-image {
+        height: auto;
+    }
+
+    .service-cards {
+        flex-direction: column;
+    }
+
+    .service-card {
+        margin-bottom: 20px;
+    }
+
+    .contact-section {
+        padding: 20px;
+    }
+}
